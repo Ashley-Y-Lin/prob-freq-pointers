@@ -21,6 +21,7 @@ function getFrequencyCounter(items) {
 function canConstructWord(word, letters) {
   if (word.length === 0) return true;
   if (letters.length === 0) return false;
+  if (word.length > letters.length) return false;
 
   const wordLetterFreqs = getFrequencyCounter(word);
   const lettersFreqs = getFrequencyCounter(letters);

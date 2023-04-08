@@ -13,8 +13,10 @@ function separatePositive(nums) {
       left++;
     }
     if (nums[left] < 0) {
-      let curr = Number(nums.splice(left, 1));
-      nums.push(curr);
+      //TODO: fix so that im not using splice, just index directly
+      //into the array and save as temp
+      let curr = nums.splice(left, 1);
+      nums.push(curr[0]);
       right--;
     }
   }

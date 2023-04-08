@@ -27,6 +27,7 @@ function sameFrequency(int1, int2) {
   let int2freqs = frequencyCounter(int2String);
 
   for (let key in int1freqs) {
+    //TODO: combine if statements using ||
     if (!key in int2freqs) {
       return false;
     }
